@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Webhook Events</title>
-    <style>
-        body { font-family: Arial; padding: 20px; }
-        h1 { color: #333; }
-        .event { padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Event Tracker</title>
+  <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1>GitHub Events</h1>
-    <div id="events-container"></div>
+  <div class="theme-toggle">
+    <label>
+      <input type="checkbox" id="theme-switch">
+      🌙Dark Mode
+    </label>
+  </div>
+  
+  <div id="alert-box" class="alert">🔔 New event received!</div>
 
-    <script src="/static/main.js"></script>
+
+  <div class="container">
+    <h1>📡 GitHub Webhook Event Tracker</h1>
+    <p class="subheading">Updated every 15 seconds. Showing latest activity from <strong>action-repo</strong>.</p>
+    
+    <div id="events-container" class="events-box">
+      <!-- Events appear here -->
+    </div>
+  </div>
+
+  <script src="/static/main.js"></script>
 </body>
 </html>
